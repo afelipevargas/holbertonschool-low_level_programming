@@ -15,7 +15,7 @@ while (i != index)
 {
 if (aux == NULL)
 {
-    return (NULL);
+return (NULL);
 }
 aux = aux->next;
 i++;
