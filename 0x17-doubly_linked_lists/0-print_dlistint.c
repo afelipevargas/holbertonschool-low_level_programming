@@ -6,15 +6,15 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-  const dlistint_t *aux = NULL;
-  size_t number_nodes = 0;
+const dlistint_t *aux = NULL;
+size_t number_nodes = 0;
 
-  aux = h;
-  while (aux)
-    {
-      number_nodes++;
-      printf("%d\n", aux->n);
-      aux = aux->next;
-    }
-  return (number_nodes);
+aux = h;
+while (aux)
+{
+number_nodes++;
+printf("%d\n", aux->n);
+aux = aux->next;
+}
+return (number_nodes);
 }
