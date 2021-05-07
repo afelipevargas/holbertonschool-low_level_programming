@@ -19,12 +19,16 @@ return (NULL);
 }
 aux = *h;
 node->n = n;
-while (index < idx)
+while (aux->next != NULL && index < idx)
 {
 aux = aux->next;
 index++;
 }
-if (aux->next == NULL)
+if (index < idx)
+{
+return (NULL);
+}
+if (aux->next == NULL && index == idx)
 {
 return (add_dnodeint_end(h, n));
 }
