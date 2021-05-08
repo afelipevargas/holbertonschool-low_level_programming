@@ -16,14 +16,13 @@ if (idx == 0)
 {
 return (add_dnodeint(h, n));
 }
-while (idx != 0)
+for (; idx != 1; idx--)
 {
 aux = aux->next;
 if (aux == NULL)
 {
 return (NULL);
 }
-idx--;
 }
 if (aux->next == NULL)
 {
