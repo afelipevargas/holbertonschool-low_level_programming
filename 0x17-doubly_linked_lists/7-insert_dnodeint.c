@@ -16,7 +16,7 @@ if (idx == 0)
 {
 return (add_dnodeint(h, n));
 }
-while (idx != 1)
+while (idx != 0)
 {
 aux = aux->next;
 if (aux == NULL)
