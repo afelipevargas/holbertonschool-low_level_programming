@@ -12,22 +12,27 @@ dlistint_t *aux = NULL;
 dlistint_t *node = NULL;
 unsigned int index = 0;
 
+
+aux = *h;
+if (idx == 0)
+{
+return (add_dnodeint(h, n));
+}
+while (aux->next != NULL && index < idx)
+{
+aux = aux->next;
+index++;
+if (aux == NULL)
+{
+return (NULL);
+}
+}
 node = malloc(sizeof(dlistint_t));
 if (node == NULL)
 {
 return (NULL);
 }
-aux = *h;
 node->n = n;
-while (aux->next != NULL && index < idx)
-{
-aux = aux->next;
-index++;
-}
-if (index < idx)
-{
-return (NULL);
-}
 if (aux->next == NULL && index == idx)
 {
 return (add_dnodeint_end(h, n));
