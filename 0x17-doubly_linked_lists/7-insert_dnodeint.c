@@ -35,9 +35,9 @@ if (node == NULL)
 return (NULL);
 }
 node->n = n;
-node->next = aux;
-node->prev = aux->prev;
-aux->prev->next = node;
-aux->prev = node;
+node->prev = aux;
+node->next = aux->next;
+aux->next->prev = node;
+aux->next = node;
 return (node);
 }
